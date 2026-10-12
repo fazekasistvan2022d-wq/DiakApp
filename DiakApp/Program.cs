@@ -14,7 +14,7 @@ namespace DiakApp
         {
             List<Diak> diakok = new List<Diak>();
             int hibasSorokSzama = 0;
-            foreach (var sor in File.ReadAllLines(@"C:\Users\13d\source\repos\DiakApp\DiakApp\bin\Debug\eredmenyek.csv"))
+            foreach (var sor in File.ReadAllLines(@"C:\Users\13d\source\repos\DiakApp\DiakApp\bin\Debug\eredmenyek.csv").Skip(1))
             {
                 string[] adatok = sor.Split(';');
                 if(adatok.Length != 3)
@@ -40,9 +40,10 @@ namespace DiakApp
                     diakok.Add(diak);
                 }
             }
+            Console.WriteLine();
             Console.WriteLine($"Sikeresen beolvasott diákik száma: {diakok.Count()} || Hibás beolvasások: {hibasSorokSzama}");
-
-            Console.WriteLine("Összes beolvasott diák adatai");
+            Console.WriteLine();
+            Console.WriteLine("Összes beolvasott diák adatai:");
             foreach (var item in diakok)
             {
                 Console.WriteLine(item);
