@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiakApp
 {
-    internal class Diak
+    public class Diak
     {
         public string Nev { get; set; }
         public string Osztaly { get; set; }
@@ -17,13 +17,13 @@ namespace DiakApp
 
             set
             {
-                if (value > 100)
+                if (value >= 100)
                 {
                     pontszam = 100;
                 }
                 else
                 {
-                    if (value < 0)
+                    if (value <= 0)
                     {
                         pontszam = 0;
                     }
