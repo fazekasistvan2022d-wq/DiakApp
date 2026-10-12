@@ -41,7 +41,7 @@ namespace DiakApp
                 }
             }
             Console.WriteLine();
-            Console.WriteLine($"Sikeresen beolvasott diákik száma: {diakok.Count()} || Hibás beolvasások: {hibasSorokSzama}");
+            Console.WriteLine($"Sikeresen beolvasott diákok száma: {diakok.Count()} || Hibás beolvasások: {hibasSorokSzama}");
             Console.WriteLine();
             Console.WriteLine("Összes beolvasott diák adatai:");
             foreach (var item in diakok)
